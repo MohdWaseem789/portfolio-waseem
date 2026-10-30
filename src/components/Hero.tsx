@@ -2,16 +2,16 @@ import { hero, site } from "@/lib/content";
 
 const pillars = [
   {
-    title: "Headless engine",
-    detail: "Node · Next.js · React · Redux · Strapi · REST",
+    title: "Full stack",
+    detail: "Node · APIs · Strapi · PostgreSQL · auth",
   },
   {
-    title: "Architecture",
-    detail: "System design · APIs · auth · data models",
+    title: "Frontend",
+    detail: "React · Next.js · Redux · performance",
   },
   {
-    title: "Team guidance",
-    detail: "Core ownership · reviews · delivery standards",
+    title: "Ecommerce & ERP",
+    detail: "Headless commerce · SAP integrations · GCC",
   },
 ];
 
@@ -42,8 +42,8 @@ export function Hero() {
           >
             WhatsApp me
           </a>
-          <a href="#experience" className="btn-secondary">
-            See core ownership
+          <a href="#expertise" className="btn-secondary">
+            View expertise
           </a>
           <a href={site.resumeUrl} className="btn-secondary" download>
             Download resume

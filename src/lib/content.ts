@@ -1,10 +1,10 @@
 export const site = {
   name: "Mohd Waseem",
-  role: "Full-Stack Engineer · Core Product Team",
+  role: "Full-Stack Engineer · Frontend Engineer · Core Product Team",
   title:
-    "Mohd Waseem — Full-Stack Engineer | Headless Commerce · Node · Next.js · React · Strapi",
+    "Full Stack Engineer UAE | Frontend Developer Dubai | Ecommerce & ERP | Mohd Waseem",
   description:
-    "Core full-stack engineer on a headless commerce engine for GCC markets — Node.js, Next.js, React, Redux, PostgreSQL, Strapi CMS and REST APIs. Architecture owner and team guide. Open to UAE, Saudi Arabia, Qatar & Bahrain.",
+    "Hire Mohd Waseem — full stack engineer and frontend engineer for Gulf jobs in Dubai, Riyadh, Doha and Bahrain. Expert in ecommerce, ERP integrations, headless commerce, React, Node.js, Next.js, Strapi, PostgreSQL and REST APIs.",
   email: "waseem4fu2@gmail.com",
   phone: "+91 96678 00308",
   phoneHref: "tel:+919667800308",
@@ -15,22 +15,73 @@ export const site = {
   resumeUrl: "/Mohd_Waseem_Resume.pdf",
 };
 
+export const seoKeywords = [
+  "full stack engineer",
+  "full stack developer",
+  "frontend engineer",
+  "frontend developer",
+  "Gulf engineer",
+  "software engineer UAE",
+  "software developer Dubai",
+  "full stack developer Dubai",
+  "frontend developer Dubai",
+  "full stack engineer Saudi Arabia",
+  "frontend engineer Riyadh",
+  "full stack developer Qatar",
+  "software engineer Doha",
+  "ecommerce developer",
+  "ecommerce engineer",
+  "headless commerce developer",
+  "ERP developer",
+  "ERP integration engineer",
+  "React developer UAE",
+  "Node.js developer Gulf",
+  "Next.js developer Dubai",
+  "B2B ecommerce developer",
+  "hire full stack engineer GCC",
+  "hire frontend engineer UAE",
+];
+
 export const hero = {
-  headline: "Core engineer on a headless commerce engine for the Gulf.",
+  headline:
+    "Full stack engineer & frontend engineer for Gulf ecommerce and ERP teams.",
   support:
-    "I help architect and ship Redington Partner Commerce as a full headless stack — Node.js, Next.js, React, Redux, PostgreSQL, Strapi CMS, REST APIs, auth and integrations — and I guide the team that builds it.",
+    "Core product engineer on a live headless commerce platform serving UAE, Saudi Arabia, Qatar and Bahrain — Node.js, React, Next.js, Redux, Strapi CMS, PostgreSQL, REST APIs, auth and SAP/ERP integrations.",
 };
 
 export const about = {
-  title: "Headless commerce ownership, end to end",
-  body: "I am a core team member on Redington Partner Commerce — a known enterprise B2B product for Gulf markets. The platform is a headless commerce engine: Node services, Next.js/React storefronts, Redux state, PostgreSQL data, Strapi CMS and REST APIs. I take architecture decisions across that stack, design schemas and API/auth flows, and mentor developers so delivery stays consistent.",
+  title: "Full stack ownership for ecommerce and ERP products",
+  body: "I am Mohd Waseem, a full stack engineer and frontend engineer on the core team of Redington Partner Commerce — a known B2B ecommerce product for Gulf markets. I own architecture across a headless commerce engine: Node.js services, React/Next.js clients, Redux, PostgreSQL, Strapi CMS, REST APIs, auth and ERP/SAP integrations. I also guide developers so delivery stays strong.",
   highlights: [
-    { label: "Role", value: "Core product team" },
-    { label: "Platform", value: "Headless commerce" },
+    { label: "Role", value: "Full stack · Frontend" },
+    { label: "Domain", value: "Ecommerce · ERP" },
     { label: "Markets", value: "UAE · KSA · Qatar · Bahrain" },
     { label: "Notice", value: "30 days" },
   ],
 };
+
+export const hireTargets = [
+  {
+    title: "Full stack engineer roles",
+    detail:
+      "End-to-end ownership across Node.js APIs, React/Next.js apps, PostgreSQL, Strapi CMS, auth and integrations for Gulf product teams.",
+  },
+  {
+    title: "Frontend engineer roles",
+    detail:
+      "Senior React and Next.js delivery with architecture-minded state management, performance, RTL/multilingual UI and enterprise UX.",
+  },
+  {
+    title: "Ecommerce developers",
+    detail:
+      "B2B/headless ecommerce experience: catalog, deals/RFQ, checkout, payments, partner portals and commerce workflows.",
+  },
+  {
+    title: "ERP-connected systems",
+    detail:
+      "Practical ERP integration work including SAP S/4HANA inventory visibility, stock-blocking and enterprise data flows.",
+  },
+];
 
 export const gulfEdge = [
   {

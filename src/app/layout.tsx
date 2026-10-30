@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Outfit, Source_Sans_3 } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
-import { site } from "@/lib/content";
+import { seoKeywords, site } from "@/lib/content";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio-waseem.vercel.app";
 
 const display = Outfit({
   variable: "--font-display",
@@ -25,22 +26,12 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description: site.description,
-  keywords: [
-    "Mohd Waseem",
-    "Full Stack Engineer",
-    "Headless Commerce",
-    "React developer UAE",
-    "Next.js developer Dubai",
-    "Node.js engineer Saudi Arabia",
-    "Full stack developer Qatar",
-    "Strapi CMS",
-    "Redington Partner",
-    "GCC jobs",
-    "Riyadh software engineer",
-    "Doha React developer",
-  ],
+  applicationName: `${site.name} Portfolio`,
+  keywords: seoKeywords,
   authors: [{ name: site.name, url: siteUrl }],
   creator: site.name,
+  publisher: site.name,
+  category: "technology",
   alternates: {
     canonical: "/",
   },
@@ -48,9 +39,9 @@ export const metadata: Metadata = {
     title: site.title,
     description: site.description,
     url: siteUrl,
-    siteName: `${site.name} Portfolio`,
-    locale: "en_US",
-    type: "website",
+    siteName: `${site.name} | Full Stack & Frontend Engineer Gulf`,
+    locale: "en_AE",
+    type: "profile",
   },
   twitter: {
     card: "summary_large_image",
@@ -65,6 +56,7 @@ export const metadata: Metadata = {
       follow: true,
       "max-image-preview": "large",
       "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
 };

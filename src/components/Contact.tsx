@@ -8,11 +8,11 @@ export function Contact() {
         <div>
           <p className="section-kicker">Contact</p>
           <h2 className="mt-3 font-display text-3xl tracking-tight text-[var(--ink)] md:text-4xl">
-            Open to core full-stack / architecture roles in the Gulf
+            Hire a full stack / frontend engineer in the Gulf
           </h2>
           <p className="mt-4 max-w-md text-base leading-relaxed text-[var(--ink-muted)]">
-            Looking for headless commerce / full-stack roles (Node, Next.js, React, Strapi, APIs)
-            in UAE, KSA, Qatar or Bahrain — 30 days’ notice.
+            Open to full stack engineer, frontend engineer, ecommerce developer and ERP-connected
+            product roles in Dubai, Riyadh, Doha and Bahrain — 30 days’ notice.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a

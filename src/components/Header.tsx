@@ -2,6 +2,7 @@ import { site } from "@/lib/content";
 
 const links = [
   { href: "#about", label: "About" },
+  { href: "#expertise", label: "Expertise" },
   { href: "#gulf", label: "Gulf fit" },
   { href: "#experience", label: "Experience" },
   { href: "#work", label: "Work" },
