@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mohd Waseem — Gulf Market Portfolio
 
-## Getting Started
+Portfolio for **Mohd Waseem**, built with **React**, **Next.js**, and **Node.js**, aimed at hiring managers in **Saudi Arabia, UAE, Qatar**, and the wider GCC.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router) + React 19
+- TypeScript + Tailwind CSS v4
+- Contact API emails leads to **waseem4fu2@gmail.com** via FormSubmit
+- SEO: metadata, Open Graph, `robots.txt`, `sitemap.xml`, Person JSON-LD
+
+## Run locally
 
 ```bash
+cd gulf-portfolio
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Gmail leads (important)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Submit the contact form once (test message).
+2. Open **waseem4fu2@gmail.com** and look for an email from **FormSubmit**.
+3. Click **Activate / Confirm** in that email.
+4. After activation, every new lead arrives in Gmail (with reply-to set to the sender).
 
-## Learn More
+Also check Spam the first time.
 
-To learn more about Next.js, take a look at the following resources:
+## SEO deploy tip
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Copy `.env.example` to `.env.local` and set your live domain:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
+```
 
-## Deploy on Vercel
+Then submit that URL in [Google Search Console](https://search.google.com/search-console).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customize
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Edit `src/lib/content.ts` for profile, projects, and skills.
+
+## Deploy
+
+```bash
+npm run build
+npm start
+```
+
+Or deploy to Vercel / any Node host that supports Next.js.
