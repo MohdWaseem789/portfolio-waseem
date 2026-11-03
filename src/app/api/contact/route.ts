@@ -12,6 +12,14 @@ function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+function siteOrigin(request: NextRequest) {
+  return (
+    request.headers.get("origin") ||
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    "https://portfolio-waseem.vercel.app"
+  );
+}
+
 export async function POST(request: NextRequest) {
   let body: ContactBody;
 
@@ -41,6 +49,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  const origin = siteOrigin(request);
   const payload = {
     name,
     email,
@@ -49,6 +58,9 @@ export async function POST(request: NextRequest) {
     message,
     _subject: `Portfolio lead: ${name}${company ? ` · ${company}` : ""}`,
     _template: "table",
+    _captcha: "false",
+    // FormSubmit treats server-side fetch as a local HTML file unless a page URL is present.
+    _url: `${origin}/#contact`,
   };
 
   try {
@@ -59,19 +71,40 @@ export async function POST(request: NextRequest) {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
+          Origin: origin,
         },
         body: JSON.stringify(payload),
+        signal: AbortSignal.timeout(12000),
       },
     );
 
-    const result = (await response.json()) as { success?: boolean | string; message?: string };
+    const raw = await response.text();
+    let result: { success?: boolean | string; message?: string } = {};
 
-    if (!response.ok) {
-      console.error("[contact] FormSubmit failed", result);
+    try {
+      result = JSON.parse(raw) as { success?: boolean | string; message?: string };
+    } catch {
+      console.error("[contact] FormSubmit returned non-JSON", response.status, raw.slice(0, 200));
       return NextResponse.json(
         {
           error:
             "Could not send right now. Please email waseem4fu2@gmail.com or use WhatsApp.",
+        },
+        { status: 502 },
+      );
+    }
+
+    const sent = result.success === true || result.success === "true";
+
+    if (!response.ok || !sent) {
+      console.error("[contact] FormSubmit failed", response.status, result);
+
+      const needsActivation = /activ/i.test(result.message ?? "");
+      return NextResponse.json(
+        {
+          error: needsActivation
+            ? "Check Gmail for a FormSubmit activation email, click Activate Form, then send again."
+            : "Could not send right now. Please email waseem4fu2@gmail.com or use WhatsApp.",
         },
         { status: 502 },
       );
@@ -87,9 +120,9 @@ export async function POST(request: NextRequest) {
     console.error("[contact] send error", error);
     return NextResponse.json(
       {
-        error: "Network error while sending. Please email waseem4fu2@gmail.com or use WhatsApp.",
+        error: "Could not send right now. Please email waseem4fu2@gmail.com or use WhatsApp.",
       },
-      { status: 500 },
+      { status: 502 },
     );
   }
 }

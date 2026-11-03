@@ -12,7 +12,7 @@ export const site = {
   location: "India · Open to Dubai, Riyadh, Doha & Bahrain · 30 days’ notice",
   linkedin: "https://linkedin.com/in/mohd-waseem-3891451a4",
   github: "https://github.com/MohdWaseem789",
-  resumeUrl: "/Mohd_Waseem_Resume.pdf",
+  resumeUrl: "/Mohd_Waseem_FullStack_Gulf_CV_ALL_GCC (3).pdf",
 };
 
 export const seoKeywords = [
@@ -140,7 +140,15 @@ export const projects = [
     market: "UAE · Headless B2B commerce engine",
     summary:
       "Flagship GCC B2B commerce platform. As core team, owned architecture and delivery across the headless stack — Node, Next.js, React, Redux, PostgreSQL, Strapi CMS, REST APIs, auth and team guidance.",
-    stack: ["Node.js", "Next.js", "React", "Redux", "Strapi", "PostgreSQL", "REST"],
+    stack: [
+      "Node.js",
+      "Next.js",
+      "React",
+      "Redux",
+      "Strapi",
+      "PostgreSQL",
+      "REST",
+    ],
     url: "https://www.redingtonpartner.com/en-ae_rme",
   },
   {
@@ -149,7 +157,7 @@ export const projects = [
     summary:
       "Central partner hub for Redington channel operations — authenticated services, account journeys and headless platform workflows for Gulf partners.",
     stack: ["Node.js", "React", "Next.js", "REST APIs", "Auth"],
-    url: "https://hub-redingtonpartner.com",
+    url: "https://hub.redingtonpartner.com",
   },
   {
     title: "Lapeyre B2B",
@@ -258,4 +266,9 @@ export const education = {
 
 export const languages = ["English — Professional", "Hindi — Native"];
 
-export const markets = ["United Arab Emirates", "Saudi Arabia", "Qatar", "Bahrain"];
+export const markets = [
+  "United Arab Emirates",
+  "Saudi Arabia",
+  "Qatar",
+  "Bahrain",
+];
